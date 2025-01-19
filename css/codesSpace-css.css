@@ -1,0 +1,484 @@
+/* ------------------------------------------------ Font and var ------------------------------------------------ */
+@font-face {
+    font-family: 'Agraham';
+    src: url(../Fonts/AgrahamPersonalUse-mLG0m.ttf);
+}
+@font-face {
+    font-family: 'BlackGold';
+    src: url(../Fonts/Blackgold-qGAl.otf);
+}
+@font-face {
+    font-family: 'FamilyHome';
+    src: url(../Fonts/TheFamilyHome.otf);
+}
+:root {
+    --Pblue : #9999fb;
+    --WhiteSmoke: #f6f6f6;
+    --Cultured: #efefef;
+    --EerieBlack: #191919;
+    --LightEerieBlack: #242424;
+    --Jet: #2f2f2f;
+    --Yellow: #e0b115;
+    --Yellow2: #ffe797;
+    --Cyan: #65ddb7;
+    --Blue: #4343f5;
+    --Orange: #ff8c00;
+    --Pink: #f54888;
+    --EarthYellow: #D3A962;
+    --unit: calc(100vw / 160);
+    --delta: .7s;
+    --side: 18rem;
+    --scrollColor : #D3A962;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------------------------------------------------- Body ---------------------------------------------------- */
+html{
+    height: 100%;
+}
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+
+    background-color: var(--LightEerieBlack);
+}
+
+/* ------------------------------------------------- Scroll Bar ------------------------------------------------- */
+body::-webkit-scrollbar {
+    width: 20px;
+    background-color: #2f2f2f;
+}
+body::-webkit-scrollbar-track {
+    border: 2px solid #2f2f2f;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--scrollColor);
+    border-radius: 8px;
+}
+
+
+/* -------------------------------------------------- Side Bar -------------------------------------------------- */
+#side-bar {
+    position: absolute;
+    display: block;
+    overflow: auto;
+    left: 0;
+    width: var(--side);
+    height: 150%;
+    background-color: #D3A962;
+}
+/* ---------------------------------------------------- Main ---------------------------------------------------- */
+main {
+    display: inline;
+    position: absolute;
+    left: var(--side);
+
+    height: auto;
+    width: calc(100vw-var(--side));
+
+    margin-left: var(--unit);
+
+}
+.main_box {
+    position: relative;
+}
+.dashboard, .notes, .projects, .contact, .pictures {
+    display: none;
+}
+
+.display {
+    display: inline;
+}
+/* ---------------------------------------------------- Text ---------------------------------------------------- */
+h1,h2 {
+    font-weight: 1000;
+    color: var(--Yellow2);
+}
+h1 {
+    font-size: 9.36vh;
+    margin-left: 1rem;
+}
+h2 {
+    font-size: 6.24vh;
+    margin-left: 4rem;
+}
+p {
+    font-size: 3.12vh;
+    font-weight: 200;
+    color: var(--Cultured);
+
+    margin: 2rem;
+}
+
+/* ---------------------------------------------------- Card ---------------------------------------------------- */
+.box-swiper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* conatiner */
+.slide-container {
+    max-width: 1720px;
+    width: 100%;
+    padding: 40px 0;
+    position: absolute;
+    scale: 100%;
+    left: 0;
+}
+/* slide-content */
+.slide-projets, .slide-profils {
+    margin: 40px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+/* card */
+.card {
+    width: 320px;
+    scale: 80%;
+    border-radius: 26px;
+    background-color: var(--EarthYellow);
+    border-style: solid;
+    border-color: #D3A962;
+}
+/* card-img */
+.card-image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding: 3px;
+}
+.image-content, .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+.image-content {
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+.card-image .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid var(--EarthYellow);
+}
+.overlay {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--LightEerieBlack);
+    border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after {
+    content: '';
+    position: absolute;
+    right: 105%; bottom: -40px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--LightEerieBlack);
+}
+.overlay::after {
+    border-radius: 0 25px 0 0;
+    background-color: var(--LightMaxYellowRed);
+}
+/* card-content */
+.name {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--Jet);
+    font-family: 'BlackGold';
+    margin: 6px;
+}
+.description {
+    font-size: 14px;
+    color: var(--EerieBlack);
+    text-align: center;
+    font-family: monospace;
+    color: var(--Jet);
+}
+.view {
+    border: none;
+    font-size: 16px;
+    font-family: monospace;
+    color: var(--Cultured);
+    padding: 8px 16px;
+    background-color: var(--Jet);
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.view:hover {
+    background-color: var(--Jet);
+}
+/* swiper */
+.swiper-navBtn {
+    color: var(--LightMaxYellowRed);
+    transition: color .3s ease;
+}
+.swiper-navBtn:hover {
+    color: var(--FrenchBriste);
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+    font-size: 40px;
+}
+.swiper-button-next {
+    right: 0;
+    color: #D3A962;
+    align-self: flex-start;
+}
+.swiper-button-prev {
+    left: 0;
+    color: #D3A962;
+}
+.swiper-pagination-projets, .swiper-pagination-profils {
+    position: absolute;
+    bottom: 0; left: 0;
+}
+.swiper-pagination-bullet {
+    background-color: var(--LightMaxYellowRed);
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    background-color: var(--DarkCamel);
+}
+
+/* --------------------------------------------------- Footer --------------------------------------------------- */
+footer {
+    display: flex;
+    position: fixed;
+    bottom: 0; left: 0;
+    z-index: 1;
+
+    margin: 0;
+    width: 100vw;
+    height: 12vh;
+
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------------------------------------------------- Menu ---------------------------------------------------- */
+.menu {
+    display: flex;
+    position: relative;
+
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+
+    width: 100%;
+    height: 100%;
+
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Jet);
+}
+button:nth-child(1) {--bgColorItem: var(--Yellow);}
+button:nth-child(2) {--bgColorItem: var(--Orange);}
+button:nth-child(3) {--bgColorItem: var(--Blue);}
+button:nth-child(4) {--bgColorItem: var(--Cyan);}
+button:nth-child(5) {--bgColorItem: var(--Pink);}
+.menu_item{
+    all: unset;
+    display: flex;
+    position: relative;
+
+    flex-grow: 1;
+    cursor: pointer;
+
+    border-radius: 50%;
+    padding: 0.55em 0 0.85em;
+    align-items: center;
+    justify-content: center;
+
+    will-change: transform;
+    transition: transform var(--timeOut , var(--delta));
+}
+.menu_item::before{
+    position: absolute;
+    content: "";
+    z-index: -1;
+
+    width: 4.2em;
+    height: 4.2em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: background-color var(--delta), transform var(--delta);
+}
+.menu_item.active {
+    transform: translate3d(0, -.8em , 0);
+}
+.menu_item.active::before{ 
+    transform: scale(1);
+    background-color: var(--bgColorItem);
+}
+.icon{
+    flex: 1;
+    width: 2.6em;
+    height: 2.6em;
+
+    stroke: #f6f6f6;
+    fill: transparent;
+
+    stroke-width: 1pt;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 400;
+}
+.menu_item.active .icon {
+    animation: strok 1.5s reverse;
+}
+@keyframes strok {
+    100% {
+        stroke-dashoffset: 400;
+    }
+}
+.menu_border{
+    position: absolute;
+    left: 0;
+    z-index: -1;
+
+    bottom: 98%;
+    width: 10.9em;
+    height: 2.4em;
+
+    clip-path: url(#menu);
+
+    will-change: transform;
+    background-color: var(--Jet);
+    transition: transform var(--timeOut , var(--delta));
+}
+.svg-container {
+    width: 0;
+    height: 0;
+}
+/* ---------------------------------------------------- Media --------------------------------------------------- */
+@media screen and (min-width: 1440px) {
+    .menu_border {
+        width: 14.6em;
+        height: 2.6em;
+    }
+}
+/*§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§PROJET§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
+
+.Explaination{
+    margin-top: 5%;
+    transform: scale(90%);
+    border-style: solid;
+    border-radius: 50px;
+    border-color: var(--Pblue);
+}
+.Project_Container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.Card_Project{
+    margin-top: 3%;
+    margin-left: 10%;
+    border-style: solid;
+    border-color: var(--Pblue);
+    width: 20%;
+    padding-bottom: 10%;
+    position: relative;
+
+}
+
+.video{
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.proj{
+    border: none;
+    font-size: 16px;
+    font-family: monospace;
+    color: var(--Cultured);
+    padding: 8px 16px;
+    background-color: var(--Jet);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all .3s ease;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+/*§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§PLUS SUR NOUS§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
+
+.présentationC{
+    position: relative;
+    border: solid;
+    border-color: #ffb457;
+    padding: 3%;
+    top: -175px;
+}
+.pastilleProfile{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cardi{
+    position: relative;
+    padding: 3px;
+    border-radius: 50%;
+    scale: 30%;
+    left: 1%;
+    top: -100px;
+}
+
+/*§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§CONTACT§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
+
+.boitetxt{
+    border: 5px solid #cffff1b0;
+    border-radius: 4px;
+    position: absolute;
+    left: 25%;
+    scale: 150%;
+}
+.forma{
+    border: 5px solid #cffff1b0;
+    border-radius: 4px;
+    position: absolute;
+    left: 15%;
+}
+.formb{
+    border: 5px solid #cffff1b0;
+    border-radius: 4px;
+    position: absolute;
+    left: 25%;
+}
+.comment{
+    position: relative;
+    left: -5%;
+    color: #cffff1b0;
+}
+
+/*§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§IMAGE§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
+
+.imageP{
+    position: relative;
+    scale: 50%;
+    top: 5%;
+    right: 20%;
+}

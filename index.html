@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>CodeSpace</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no'>
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+        <link rel='stylesheet' type='text/css' media='screen' href='css/codesSpace-css.css'>
+        <link rel= "icon" href="Assets/logo.png" type="image/x-icon">
+    </head>
+    <!--Body-->
+    <body>
+        <!-- Aside -->
+        <aside id="side-bar" class="ColorSwitch">
+        </aside>
+        <!-- Main -->
+        <main>
+            <div class="main_box dashboard display">
+                <h1 class="TextSwitch">Accueil</h1>
+                <h2 class="TextSwitch">News</h2>
+                <p>Bienvenue sur Code Space, le portfolio numérique des étudiants passionnés de programmation qui ont créé ce site !</p>
+
+                <P> Nous avons créé Code Space pour offrir un espace en ligne où nous pouvons partager notre passion pour la programmation avec d'autres personnes du monde entier. Notre portfolio numérique présente une sélection de nos meilleurs projets de programmation, ainsi que nos compétences et notre expérience en matière de développement de logiciels.</P>
+                    
+                <p>Nous sommes fiers de notre travail et espérons que notre portfolio incitera d'autres étudiants en informatique à se lancer dans des projets passionnants et innovants.
+                    
+                Notre portfolio est constamment mis à jour avec nos projets les plus récents, alors n'hésitez pas à revenir régulièrement pour voir nos dernières réalisations.
+                </p>
+                <div class="slide-container swiper">
+                    <div class="slide-profils">
+                        <div class="card-wrapper swiper-wrapper">
+                            <div class="card swiper-slide">
+                                <div class="image-content">
+                                    <span class="overlay"></span>
+                                    <div class="card-image">
+                                        <img src="Assets/Clément.jpg" alt="" class="card-img">
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h2 class="name">Clément BOBEDA</h2>
+                                    <p class="description">Bienvenue sur mon profil ! Je suis Clément, étudiant en informatique passionné par l'univers captivant du développement de jeux vidéo.</p>
+                                    <button class="view" onclick="clickItem(this, 1)">En savoir plus</button>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="image-content">
+                                    <span class="overlay"></span>
+                                    <div class="card-image">
+                                        <img src="Assets/Aelig.png" alt="" class="card-img">
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h2 class="name">Aelig JIMENEZ</h2>
+                                    <p class="description">Bienvenue sur mon profil ! Je suis Aëlig, étudiant en informatique passionné par l'univers captivant du développement de jeux vidéo.</p>
+                                    <button class="view" onclick="clickItem(this, 1)">En savoir plus</button>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="image-content">
+                                    <span class="overlay"></span>
+                                    <div class="card-image">
+                                        <img src="Assets/Low Resolution Logo - Transparent Background.png" alt="" class="card-img">
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h2 class="name">V.Bernigole</h2>
+                                    <p class="description">Lorem ipsum dolor sit amet. Et velit galisum eum voluptatem minima ex autem amet ab atque sapiente. Est iste culpa et expedita tempore aut omnis enim est error cumque et quia rerum aut ratione. In nihil amet non veniam dolorum ut libero illum.</p>
+                                    <button class="view" onclick="clickItem(this, 1)">En savoir plus</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next profils swiper-navBtn"></div>
+                    <div class="swiper-button-prev profils swiper-navBtn"></div>
+                    <div class="swiper-pagination-profils"></div>
+                </div>
+            </div>
+            <div class="main_box contact">
+                <h1 class="TextSwitch">Contact</h1>
+                <form action="mailto:clement.bobeda@gmail.com" method="post" enctype="text/plain">
+                    <H2 class = "comment">Envoyez-nous vos commentaires:</H2><br>
+                    <input type="text" name=" " size="50" class = "boitetxt"><br><br>
+                    <input type="submit" value="Send" class = "forma">
+                    <input type="reset" value="Reset" class = "formb">
+                </form>
+            </div>
+            <iframe hidden = "hidden" class = "video" id="proj" width="560" height="315" src="https://www.youtube.com/embed/Y0GH-Cu-AHM?si=r-sKOgiYLTT1DypC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe hidden = "hidden" class = "video" id="proj" width="560" height="315" src="https://www.youtube.com/embed/ekBQ7APx2mw?si=OkBeqY6T89aS8B7f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="main_box projects" id = "main_box projects">
+                <h1 class="TextSwitch">Projets</h1>
+                <div class="Explaination">
+                    <p>Bienvenue dans la section dédiée à mes projets, une vitrine numérique de mes réalisations et de mon parcours professionnel. Ces projets incarnent ma passion pour l'innovation et les technologies émergentes.</p>
+                </div>
+                <div class="Project_Container">
+                    <div class="Card_Project">
+                        <p>Projet de moteur graphique en pyopengl une librairie afin d'utilisée opengl sous python</p>
+                        <button class="proj" onclick="clickbutton(projnum = 0)">VIDEO</button>
+                    </div>
+                    <div class="Card_Project">
+                        <p>jeu sous unity realisé sans tutorial</p>
+                        <button class="proj" onclick="clickbutton(projnum = 1)">VIDEO</button>
+                    </div>
+                </div>
+            </div>
+            <div class="main_box notes">
+                <h1 class="TextSwitch">À propos de nous</h1>
+                <div class = "pastilleProfile">
+                    <h2> Clément</h2>
+                    <img src="Assets/Clément.jpg" alt="" class="cardi">
+                
+                </div>
+                <p class="présentationC">Bienvenue sur mon profil ! Je suis Clément, étudiant en informatique passionné par l'univers captivant du développement de jeux vidéo.<br><br><br>
+
+                    Qui suis-je ?<br><br>   
+                    
+                    Actuellement en première année d'informatique à l'UVSQ, je me démarque par ma passion dévorante pour la création de mondes virtuels interactifs. Mon parcours académique m'a fourni une base technique solide, mais c'est ma passion pour l'innovation et la créativité qui m'a naturellement conduit vers le monde fascinant des jeux vidéo.<br><br><br>
+                    
+                    Pourquoi les jeux vidéo ?<br><br>
+                    
+                    Les jeux vidéo sont pour moi bien plus qu'une simple source de divertissement. C'est un médium puissant qui combine art, technologie et narration pour offrir une expérience immersive unique. Mon objectif en tant que futur développeur de jeux est de créer des expériences qui transcendent les limites du virtuel, captivant les joueurs et les transportant dans des mondes extraordinaires.<br><br><br>
+                    
+                    Compétences clés :<br><br>
+                    
+                    Développement de Jeux : Maîtrise des langages de programmation et des moteurs tels que python, C#, Unity, et Unreal Engine. Expérience pratique dans la conception et la mise en œuvre de mécaniques de jeu complexes.<br>
+                    
+                    Graphismes et Animation : Connaissance des principes de base de la modélisation 3D, du texturage et de l'animation. Collaboration avec des artistes pour donner vie à des mondes visuellement riches.<br>
+                    
+                    Narration Interactive : Compréhension approfondie de la construction de scénarios interactifs et de la narration dans le contexte des jeux vidéo.<br><br><br>
+                    
+                    Projets notables :<br><br>
+                    
+                    Au cours de mon parcours, j'ai eu l'opportunité de travailler sur plusieurs projets passionnants, dont La nuit du code, où j'ai dirigé une équipe de développement pour créer un jeu en un temps apparti.<br><br><br>
+                    
+                    Objectifs futurs :<br><br>
+                    
+                    Mon ambition est de contribuer à l'industrie du jeu vidéo en tant que créateur de contenu innovant. Je suis actuellement à la recherche d'opportunités de stages ou de projets collaboratifs pour continuer à développer mes compétences et à enrichir mon portfolio.<br>
+                    
+                    N'hésitez pas à explorer mes projets et à me contacter si vous partagez ma passion pour les jeux vidéo ou si vous avez des opportunités de collaboration. Ensemble, créons des mondes extraordinaires !</p><br><br>
+
+            </div>
+            <div class="main_box pictures">
+                <h1 class="TextSwitch">Images</h1>
+                <img src="Assets/voxel.png" alt="" class = "imageP">
+                <img src="Assets/plateforme.png" alt="" class = "imageP">
+                <img src="Assets/Pycraft.png" alt="" class = "imageP">
+            </div>
+            <script src="js/swiper-bundle.min.js"></script>
+            <script src="js/swiper.js"></script>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <menu class="menu">
+                <button class="menu_item active">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M5.1,3.9h13.9c0.6,0,1.2,0.5,1.2,1.2v13.9c0,0.6-0.5,1.2-1.2,1.2H5.1c-0.6,0-1.2-0.5-1.2-1.2V5.1C3.9,4.4,4.4,3.9,5.1,3.9z"></path>
+                        <path d="M4.2,9.3h15.6"></path>
+                        <path d="M9.1,9.5v10.3"></path>
+                    </svg>
+                </button>
+                <button class="menu_item">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M3.8,6.6h16.4"></path>
+                        <path d="M20.2,12.1H3.8"></path>
+                        <path d="M3.8,17.5h16.4"></path>
+                    </svg>
+                </button>               
+                <button class="menu_item">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M3.4,11.9l8.8,4.4l8.4-4.4"></path>
+                        <path d="M3.4,16.2l8.8,4.5l8.4-4.5"></path>
+                        <path d="M3.7,7.8l8.6-4.5l8,4.5l-8,4.3L3.7,7.8z"></path>
+                    </svg>
+                </button>
+                <button class="menu_item">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path  d="M6.7,4.8h10.7c0.3,0,0.6,0.2,0.7,0.5l2.8,7.3c0,0.1,0,0.2,0,0.3v5.6c0,0.4-0.4,0.8-0.8,0.8H3.8C3.4,19.3,3,19,3,18.5v-5.6c0-0.1,0-0.2,0.1-0.3L6,5.3C6.1,5,6.4,4.8,6.7,4.8z"/>
+                        <path  d="M3.4,12.9H8l1.6,2.8h4.9l1.5-2.8h4.6"/>
+                    </svg>
+                </button>
+                <button class="menu_item">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M5.1,3.9h13.9c0.6,0,1.2,0.5,1.2,1.2v13.9c0,0.6-0.5,1.2-1.2,1.2H5.1c-0.6,0-1.2-0.5-1.2-1.2V5.1C3.9,4.4,4.4,3.9,5.1,3.9z"></path>
+                        <path d="M5.5,20l9.9-9.9l4.7,4.7"></path>
+                        <path d="M10.4,8.8c0,0.9-0.7,1.6-1.6,1.6c-0.9,0-1.6-0.7-1.6-1.6C7.3,8,8,7.3,8.9,7.3C9.7,7.3,10.4,8,10.4,8.8z"></path>
+                    </svg>
+                </button>
+                <div class="menu_border"></div>
+            </menu>
+            <div class="svg-container">
+                <svg viewBox="0 0 202.9 45.5" >
+                    <clipPath id="menu" clipPathUnits="objectBoundingBox" transform="scale(0.0049285362247413 0.021978021978022)">
+                        <path  d="M6.7,45.5c5.7,0.1,14.1-0.4,23.3-4c5.7-2.3,9.9-5,18.1-10.5c10.7-7.1,11.8-9.2,20.6-14.3c5-2.9,9.2-5.2,15.2-7c7.1-2.1,13.3-2.3,17.6-2.1c4.2-0.2,10.5,0.1,17.6,2.1c6.1,1.8,10.2,4.1,15.2,7c8.8,5,9.9,7.1,20.6,14.3c8.3,5.5,12.4,8.2,18.1,10.5c9.2,3.6,17.6,4.2,23.3,4H6.7z"/>
+                    </clipPath>
+                </svg>
+            </div>
+        </footer>
+        <script src="js/menu.js"></script>
+    </body>
+</html>
